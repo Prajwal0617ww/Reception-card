@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title data-key="documentTitle">Reception Invitation | Abhijeet & Radhika</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Removed Dancing Script, back to Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide-icons/dist/lucide.min.js"></script>
+
+    <style>
+        /* Define custom font classes */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* Reverted to plain gray background */
+            background-color: #f3f4f6; /* bg-gray-100 */
+        }
+        /* English display font for headings and names */
+        .font-display {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Marathi font */
+        .font-mr {
+            font-family: 'Tiro Devanagari Marathi', serif !important; /* Use !important to override defaults */
+        }
+        
+        /* Fade-in animation */
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen py-12 px-4">
+
+    <!-- Main Card -->
+    <!-- Reverted to bg-rose-50 -->
+    <div id="card-container" class="max-w-md w-full bg-rose-50 shadow-2xl rounded-lg overflow-hidden relative fade-in">
+        
+        <!-- Language Toggle -->
+        <div class="absolute top-4 right-4 z-10">
+            <button id="lang-en" class="px-3 py-1 bg-amber-500 text-white text-sm rounded-l-md font-semibold transition hover:bg-amber-600 focus:outline-none">English</button>
+            <button id="lang-mr" class="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-r-md font-semibold transition hover:bg-gray-300 focus:outline-none">मराठी</button>
+        </div>
+
+        <!-- Top Gold Border -->
+        <div class="w-full h-1.5 bg-amber-500"></div>
+
+        <!-- ADDED BACK SVG Corner Graphic - Top Left -->
+        <svg class="absolute top-2 left-2 w-20 h-20 text-amber-500 opacity-20" fill="currentColor" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M100 0C44.77 0 0 44.77 0 100v100h12.5C12.5 155.8 55.8 112.5 112.5 112.5H200V100C200 44.77 155.23 0 100 0z" clip-rule="evenodd"/>
+        </svg>
+
+        <!-- ADDED BACK SVG Corner Graphic - Bottom Right -->
+        <svg class="absolute bottom-2 right-2 w-20 h-20 text-amber-500 opacity-20 transform rotate-180" fill="currentColor" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M100 0C44.77 0 0 44.77 0 100v100h12.5C12.5 155.8 55.8 112.5 112.5 112.5H200V100C200 44.77 155.23 0 100 0z" clip-rule="evenodd"/>
+        </svg>
+        
+        <!-- Card Content -->
+        <div class="p-8 md:p-10 relative z-0">
+            
+            <div class="text-center">
+                <div class="inline-block bg-amber-100 text-amber-600 p-3 rounded-full">
+                    <i data-lucide="party-popper" class="w-8 h-8"></i>
+                </div>
+                
+                <h2 class="font-display text-amber-600 text-5xl mt-4" data-key="receptionTitle">Reception</h2>
+                
+                <!-- Reverted to SVG divider -->
+                <div class="w-1/2 mx-auto my-6 h-px bg-gradient-to-r from-rose-50 via-amber-300 to-rose-50"></div>
+
+                <p class="text-gray-600 mt-6 text-base" data-key="blessingsMessage">We humbly request your gracious presence to celebrate the wedding reception of</p>
+                
+                <!-- Reverted name font to font-display -->
+                <h1 class="font-display text-gray-900 text-6xl mt-4" data-key="groomName">Abhijeet</h1>
+                <p class="font-display text-3xl text-gray-500 my-2" data-key="ampersand">&</p>
+                <!-- Reverted name font to font-display -->
+                <h1 class="font-display text-gray-900 text-6xl" data-key="brideName">Radhika</h1>
+
+                <p class="text-gray-500 text-sm mt-6" data-key="hostedBy">Hosted by</p>
+                <p class="text-gray-700 text-base mt-2 leading-relaxed" data-key="groomParents">Sudhakar Manikrao Tayde<br>& Pushpatai Sudhakarrao Tayde</p>
+                <p class="text-gray-700 text-base mt-2 leading-relaxed" data-key="brideParents">Sopan Vitthalrao Yadgire<br>& Vidya Sopanrao Yadgire</p>
+            </div>
+
+            <!-- Reverted to SVG divider -->
+            <div class="w-2/3 mx-auto my-10 h-px bg-gradient-to-r from-rose-50 via-amber-300 to-rose-50"></div>
+
+            <!-- Event Details -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div>
+                    <div class="flex justify-center items-center text-gray-500 mb-2">
+                        <i data-lucide="calendar-days" class="w-5 h-5 mr-2"></i>
+                        <h3 class="font-display text-xl font-semibold text-gray-900" data-key="timeTitle">Time</h3>
+                    </div>
+                    <p class="text-gray-700 mt-1" data-key="eventDate">Sunday, 23rd November 2025</p>
+                    <p class="text-gray-700" data-key="timeReception">12:00 PM onwards</p>
+                </div>
+                <div>
+                    <div class="flex justify-center items-center text-gray-500 mb-2">
+                        <i data-lucide="map-pin" class="w-5 h-5 mr-2"></i>
+                        <h3 class="font-display text-xl font-semibold text-gray-900" data-key="venueTitle">Venue</h3>
+                    </div>
+                    <p class="text-gray-700 mt-1" data-key="venueReception">Santaji Bhavan<br>Near Hotel Lords, Old Bypass MIDC Road, Amravati</p>
+                    <a href="https://maps.app.goo.gl/FweY2aDRQzf1eMGv5?g_st=aw" target="_blank" data-key="mapReception" class="text-amber-600 font-semibold text-sm mt-2 inline-block hover:underline">
+                        View on Map
+                    </a>
+                </div>
+            </div>
+
+            <!-- Reverted to SVG divider -->
+            <div class="w-2/3 mx-auto my-10 h-px bg-gradient-to-r from-rose-50 via-amber-300 to-rose-50"></div>
+
+            <!-- Footer -->
+            <footer class="text-center">
+                <p class="font-display text-gray-500 text-3xl" data-key="withLove">With Love,</p>
+                <p class="text-gray-500 text-sm mt-1" data-key="footerFamilies">The Tayde & Yadgire Families</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // --- TRANSLATION DATA ---
+        // All text content is stored here.
+        const translations = {
+            'en': {
+                'documentTitle': 'Reception Invitation | Abhijeet & Radhika',
+                'receptionTitle': 'Reception',
+                'blessingsMessage': 'We humbly request your gracious presence to celebrate the wedding reception of',
+                'groomName': 'Abhijeet',
+                'brideName': 'Radhika',
+                'ampersand': '&',
+                'hostedBy': 'Hosted by',
+                'groomParents': 'Sudhakar Manikrao Tayde<br>& Pushpatai Sudhakarrao Tayde',
+                'brideParents': 'Sopan Vitthalrao Yadgire<br>& Vidya Sopanrao Yadgire',
+                'timeTitle': 'Time',
+                'venueTitle': 'Venue',
+                'eventDate': 'Sunday, 23rd November 2025',
+                'timeReception': '12:00 PM onwards',
+                'venueReception': 'Santaji Bhavan<br>Near Hotel Lords, Old Bypass MIDC Road, Amravati',
+                'mapReception': 'View on Map',
+                'withLove': 'With Love,',
+                'footerFamilies': 'The Tayde & Yadgire Families'
+            },
+            'mr': {
+                'documentTitle': 'स्वागत समारंभ | अभिजीत आणि राधिका',
+                'receptionTitle': 'स्वागत समारंभ',
+                'blessingsMessage': 'आमच्या लग्न स्वागत समारंभास आपण उपस्थित राहून आम्हास आशीर्वाद द्यावेत, हीच विनंती.',
+                'groomName': 'अभिजीत',
+                'brideName': 'राधिका',
+                'ampersand': 'आणि',
+                'hostedBy': 'निमंत्रक',
+                'groomParents': 'श्री. सुधाकर माणिकराव तायडे<br>आणि सौ. पुष्पाताई सुधाकरराव तायडे',
+                'brideParents': 'श्री. सोपान विठ्ठलराव यादगिरे<br>आणि सौ. विद्या सोपानराव यादगिरे',
+                'timeTitle': 'वेळ',
+                'venueTitle': 'ठिकाण',
+                'eventDate': 'रविवार, २३ नोव्हेंबर २०२५',
+                'timeReception': 'दुपारी १२:०० वाजल्यापासून',
+                'venueReception': 'संताजी भवन<br>हॉटेल लॉर्ड्स जवळ, जुना बायपास एमआयडीसी रोड, अमरावती',
+                'mapReception': 'नकाशावर पहा',
+                'withLove': 'स्नेहांकित,',
+                'footerFamilies': 'तायडे आणि यादगिरे परिवार'
+            }
+        };
+
+        // --- LANGUAGE TOGGLE FUNCTIONALITY (Reverted) ---
+        const langEnBtn = document.getElementById('lang-en');
+        const langMrBtn = document.getElementById('lang-mr');
+        
+        // Get all elements that need translation
+        const allTextElements = document.querySelectorAll('[data-key]');
+        
+        // Get elements that use the 'font-display' (Cormorant)
+        // This now includes the names again
+        const displayElements = document.querySelectorAll('.font-display');
+
+        // Removed 'scriptElements'
+
+        function setLanguage(lang) {
+            // 1. Update text for all elements
+            allTextElements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // 2. Update document title
+            document.title = translations[lang]['documentTitle'];
+            
+            // 3. Update styles
+            if (lang === 'en') {
+                // --- Set Button Styles ---
+                langEnBtn.classList.remove('bg-gray-200', 'text-gray-700');
+                langEnBtn.classList.add('bg-amber-500', 'text-white');
+                langMrBtn.classList.remove('bg-amber-500', 'text-white');
+                langMrBtn.classList.add('bg-gray-200', 'text-gray-700');
+                
+                // --- Set Font Styles ---
+                // Remove Marathi font from all elements
+                allTextElements.forEach(el => el.classList.remove('font-mr'));
+                // Add back the English display font
+                displayElements.forEach(el => el.classList.add('font-display'));
+                
+            } else { // lang === 'mr'
+                // --- Set Button Styles ---
+                langMrBtn.classList.remove('bg-gray-200', 'text-gray-700');
+                langMrBtn.classList.add('bg-amber-500', 'text-white');
+                langEnBtn.classList.remove('bg-amber-500', 'text-white');
+                langEnBtn.classList.add('bg-gray-200', 'text-gray-700');
+                
+                // --- Set Font Styles ---
+                // Add Marathi font to all elements
+                allTextElements.forEach(el => el.classList.add('font-mr'));
+                // REMOVE the English display font
+                displayElements.forEach(el => el.classList.remove('font-display'));
+            }
+            
+            // 4. Set the lang attribute on the HTML tag for accessibility
+            document.documentElement.lang = lang;
+        }
+
+        // --- INITIALIZE PAGE ---
+        
+        // Add click event listeners
+        langEnBtn.addEventListener('click', () => setLanguage('en'));
+        langMrBtn.addEventListener('click', () => setLanguage('mr'));
+
+        // Load Lucide icons
+        lucide.createIcons();
+
+        // Set the default language when the page loads
+        setLanguage('en');
+
+    </script>
+</body>
+</html>
+
