@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-key="documentTitle">Reception Invitation | Abhijeet & Radhika</title>
     
     <!-- Tailwind CSS CDN -->
@@ -11,7 +11,6 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Removed Dancing Script, back to Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons CDN -->
@@ -21,10 +20,9 @@
         /* Define custom font classes */
         body {
             font-family: 'Montserrat', sans-serif;
-            /* Reverted to plain gray background */
             background-color: #f3f4f6; /* bg-gray-100 */
         }
-        /* English display font for headings and names */
+        /* English display font for headings */
         .font-display {
             font-family: 'Cormorant Garamond', serif;
         }
@@ -47,7 +45,6 @@
 <body class="flex items-center justify-center min-h-screen py-12 px-4">
 
     <!-- Main Card -->
-    <!-- Reverted to bg-rose-50 -->
     <div id="card-container" class="max-w-md w-full bg-rose-50 shadow-2xl rounded-lg overflow-hidden relative fade-in">
         
         <!-- Language Toggle -->
@@ -59,12 +56,12 @@
         <!-- Top Gold Border -->
         <div class="w-full h-1.5 bg-amber-500"></div>
 
-        <!-- ADDED BACK SVG Corner Graphic - Top Left -->
+        <!-- SVG Corner Graphic - Top Left -->
         <svg class="absolute top-2 left-2 w-20 h-20 text-amber-500 opacity-20" fill="currentColor" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M100 0C44.77 0 0 44.77 0 100v100h12.5C12.5 155.8 55.8 112.5 112.5 112.5H200V100C200 44.77 155.23 0 100 0z" clip-rule="evenodd"/>
         </svg>
 
-        <!-- ADDED BACK SVG Corner Graphic - Bottom Right -->
+        <!-- SVG Corner Graphic - Bottom Right -->
         <svg class="absolute bottom-2 right-2 w-20 h-20 text-amber-500 opacity-20 transform rotate-180" fill="currentColor" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M100 0C44.77 0 0 44.77 0 100v100h12.5C12.5 155.8 55.8 112.5 112.5 112.5H200V100C200 44.77 155.23 0 100 0z" clip-rule="evenodd"/>
         </svg>
@@ -79,15 +76,10 @@
                 
                 <h2 class="font-display text-amber-600 text-5xl mt-4" data-key="receptionTitle">Reception</h2>
                 
-                <!-- Reverted to SVG divider -->
-                <div class="w-1/2 mx-auto my-6 h-px bg-gradient-to-r from-rose-50 via-amber-300 to-rose-50"></div>
-
                 <p class="text-gray-600 mt-6 text-base" data-key="blessingsMessage">We humbly request your gracious presence to celebrate the wedding reception of</p>
                 
-                <!-- Reverted name font to font-display -->
                 <h1 class="font-display text-gray-900 text-6xl mt-4" data-key="groomName">Abhijeet</h1>
                 <p class="font-display text-3xl text-gray-500 my-2" data-key="ampersand">&</p>
-                <!-- Reverted name font to font-display -->
                 <h1 class="font-display text-gray-900 text-6xl" data-key="brideName">Radhika</h1>
 
                 <p class="text-gray-500 text-sm mt-6" data-key="hostedBy">Hosted by</p>
@@ -95,7 +87,7 @@
                 <p class="text-gray-700 text-base mt-2 leading-relaxed" data-key="brideParents">Sopan Vitthalrao Yadgire<br>& Vidya Sopanrao Yadgire</p>
             </div>
 
-            <!-- Reverted to SVG divider -->
+            <!-- SVG Divider -->
             <div class="w-2/3 mx-auto my-10 h-px bg-gradient-to-r from-rose-50 via-amber-300 to-rose-50"></div>
 
             <!-- Event Details -->
@@ -120,7 +112,7 @@
                 </div>
             </div>
 
-            <!-- Reverted to SVG divider -->
+            <!-- SVG Divider -->
             <div class="w-2/3 mx-auto my-10 h-px bg-gradient-to-r from-rose-50 via-amber-300 to-rose-50"></div>
 
             <!-- Footer -->
@@ -176,18 +168,15 @@
             }
         };
 
-        // --- LANGUAGE TOGGLE FUNCTIONALITY (Reverted) ---
+        // --- LANGUAGE TOGGLE FUNCTIONALITY (FIXED) ---
         const langEnBtn = document.getElementById('lang-en');
         const langMrBtn = document.getElementById('lang-mr');
         
         // Get all elements that need translation
         const allTextElements = document.querySelectorAll('[data-key]');
         
-        // Get elements that use the 'font-display' (Cormorant)
-        // This now includes the names again
+        // Get all elements that use the special English display font
         const displayElements = document.querySelectorAll('.font-display');
-
-        // Removed 'scriptElements'
 
         function setLanguage(lang) {
             // 1. Update text for all elements
@@ -225,7 +214,7 @@
                 // --- Set Font Styles ---
                 // Add Marathi font to all elements
                 allTextElements.forEach(el => el.classList.add('font-mr'));
-                // REMOVE the English display font
+                // REMOVE the English display font so Marathi font can take over
                 displayElements.forEach(el => el.classList.remove('font-display'));
             }
             
